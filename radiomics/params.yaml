@@ -1,0 +1,19 @@
+# General settings
+setting:
+  binWidth: 25                    # Width of gray-level bins
+  resampledPixelSpacing: [1, 1]   # Resample to isotropic voxel spacing (for 2D images)
+  normalize: true                 # Normalize intensity values to zero mean and unit variance
+  removeOutliers: 1.0             # This value should be a float (e.g., 1.0 for true, 0.0 for false)
+  interpolator: 'sitkBSpline'     # Interpolation method for resampling
+  padDistance: 5                  # Padding distance around the ROI
+
+# Image types to apply filters
+imageType:
+  Original: {}                    # Use original images
+
+# Feature classes to extract
+featureClass:
+  glcm:
+    - SumEntropy
+  glrlm: 
+    - RunLengthNonUniformity
